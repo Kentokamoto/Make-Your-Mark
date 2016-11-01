@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4A1DC854C50093CBBC /* AppDelegate.swift */; };
+		F784CB4D1DC854C50093CBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4C1DC854C50093CBBC /* ViewController.swift */; };
+		F784CB501DC854C50093CBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784CB4E1DC854C50093CBBC /* Main.storyboard */; };
+		F784CB521DC854C50093CBBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F784CB511DC854C50093CBBC /* Assets.xcassets */; };
+		F784CB551DC854C50093CBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */; };
+		F784CB601DC854C50093CBBC /* Make_Your_MarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB5F1DC854C50093CBBC /* Make_Your_MarkTests.swift */; };
+		F784CB6B1DC854C50093CBBC /* Make_Your_MarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB6A1DC854C50093CBBC /* Make_Your_MarkUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F784CB5C1DC854C50093CBBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F784CB3F1DC854C50093CBBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F784CB461DC854C50093CBBC;
+			remoteInfo = "Make Your Mark";
+		};
+		F784CB671DC854C50093CBBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F784CB3F1DC854C50093CBBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F784CB461DC854C50093CBBC;
+			remoteInfo = "Make Your Mark";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F784CB471DC854C50093CBBC /* Make Your Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make Your Mark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F784CB4A1DC854C50093CBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F784CB4C1DC854C50093CBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F784CB4F1DC854C50093CBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F784CB511DC854C50093CBBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F784CB541DC854C50093CBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F784CB561DC854C50093CBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F784CB5B1DC854C50093CBBC /* Make Your MarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make Your MarkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F784CB5F1DC854C50093CBBC /* Make_Your_MarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_Your_MarkTests.swift; sourceTree = "<group>"; };
+		F784CB611DC854C50093CBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F784CB661DC854C50093CBBC /* Make Your MarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make Your MarkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F784CB6A1DC854C50093CBBC /* Make_Your_MarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_Your_MarkUITests.swift; sourceTree = "<group>"; };
+		F784CB6C1DC854C50093CBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F784CB441DC854C50093CBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F784CB581DC854C50093CBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F784CB631DC854C50093CBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F784CB3E1DC854C50093CBBC = {
+			isa = PBXGroup;
+			children = (
+				F784CB491DC854C50093CBBC /* Make Your Mark */,
+				F784CB5E1DC854C50093CBBC /* Make Your MarkTests */,
+				F784CB691DC854C50093CBBC /* Make Your MarkUITests */,
+				F784CB481DC854C50093CBBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F784CB481DC854C50093CBBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F784CB471DC854C50093CBBC /* Make Your Mark.app */,
+				F784CB5B1DC854C50093CBBC /* Make Your MarkTests.xctest */,
+				F784CB661DC854C50093CBBC /* Make Your MarkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F784CB491DC854C50093CBBC /* Make Your Mark */ = {
+			isa = PBXGroup;
+			children = (
+				F784CB4A1DC854C50093CBBC /* AppDelegate.swift */,
+				F784CB4C1DC854C50093CBBC /* ViewController.swift */,
+				F784CB4E1DC854C50093CBBC /* Main.storyboard */,
+				F784CB511DC854C50093CBBC /* Assets.xcassets */,
+				F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */,
+				F784CB561DC854C50093CBBC /* Info.plist */,
+			);
+			path = "Make Your Mark";
+			sourceTree = "<group>";
+		};
+		F784CB5E1DC854C50093CBBC /* Make Your MarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F784CB5F1DC854C50093CBBC /* Make_Your_MarkTests.swift */,
+				F784CB611DC854C50093CBBC /* Info.plist */,
+			);
+			path = "Make Your MarkTests";
+			sourceTree = "<group>";
+		};
+		F784CB691DC854C50093CBBC /* Make Your MarkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F784CB6A1DC854C50093CBBC /* Make_Your_MarkUITests.swift */,
+				F784CB6C1DC854C50093CBBC /* Info.plist */,
+			);
+			path = "Make Your MarkUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F784CB461DC854C50093CBBC /* Make Your Mark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F784CB6F1DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your Mark" */;
+			buildPhases = (
+				F784CB431DC854C50093CBBC /* Sources */,
+				F784CB441DC854C50093CBBC /* Frameworks */,
+				F784CB451DC854C50093CBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Make Your Mark";
+			productName = "Make Your Mark";
+			productReference = F784CB471DC854C50093CBBC /* Make Your Mark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F784CB5A1DC854C50093CBBC /* Make Your MarkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F784CB721DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your MarkTests" */;
+			buildPhases = (
+				F784CB571DC854C50093CBBC /* Sources */,
+				F784CB581DC854C50093CBBC /* Frameworks */,
+				F784CB591DC854C50093CBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F784CB5D1DC854C50093CBBC /* PBXTargetDependency */,
+			);
+			name = "Make Your MarkTests";
+			productName = "Make Your MarkTests";
+			productReference = F784CB5B1DC854C50093CBBC /* Make Your MarkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F784CB651DC854C50093CBBC /* Make Your MarkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F784CB751DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your MarkUITests" */;
+			buildPhases = (
+				F784CB621DC854C50093CBBC /* Sources */,
+				F784CB631DC854C50093CBBC /* Frameworks */,
+				F784CB641DC854C50093CBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F784CB681DC854C50093CBBC /* PBXTargetDependency */,
+			);
+			name = "Make Your MarkUITests";
+			productName = "Make Your MarkUITests";
+			productReference = F784CB661DC854C50093CBBC /* Make Your MarkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F784CB3F1DC854C50093CBBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Kento Okamoto";
+				TargetAttributes = {
+					F784CB461DC854C50093CBBC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78D57PJNWL;
+						ProvisioningStyle = Automatic;
+					};
+					F784CB5A1DC854C50093CBBC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78D57PJNWL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F784CB461DC854C50093CBBC;
+					};
+					F784CB651DC854C50093CBBC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78D57PJNWL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F784CB461DC854C50093CBBC;
+					};
+				};
+			};
+			buildConfigurationList = F784CB421DC854C50093CBBC /* Build configuration list for PBXProject "Make Your Mark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F784CB3E1DC854C50093CBBC;
+			productRefGroup = F784CB481DC854C50093CBBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F784CB461DC854C50093CBBC /* Make Your Mark */,
+				F784CB5A1DC854C50093CBBC /* Make Your MarkTests */,
+				F784CB651DC854C50093CBBC /* Make Your MarkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F784CB451DC854C50093CBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F784CB551DC854C50093CBBC /* LaunchScreen.storyboard in Resources */,
+				F784CB521DC854C50093CBBC /* Assets.xcassets in Resources */,
+				F784CB501DC854C50093CBBC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F784CB591DC854C50093CBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F784CB641DC854C50093CBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F784CB431DC854C50093CBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F784CB4D1DC854C50093CBBC /* ViewController.swift in Sources */,
+				F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F784CB571DC854C50093CBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F784CB601DC854C50093CBBC /* Make_Your_MarkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F784CB621DC854C50093CBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F784CB6B1DC854C50093CBBC /* Make_Your_MarkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F784CB5D1DC854C50093CBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F784CB461DC854C50093CBBC /* Make Your Mark */;
+			targetProxy = F784CB5C1DC854C50093CBBC /* PBXContainerItemProxy */;
+		};
+		F784CB681DC854C50093CBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F784CB461DC854C50093CBBC /* Make Your Mark */;
+			targetProxy = F784CB671DC854C50093CBBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F784CB4E1DC854C50093CBBC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F784CB4F1DC854C50093CBBC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F784CB541DC854C50093CBBC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F784CB6D1DC854C50093CBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F784CB6E1DC854C50093CBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F784CB701DC854C50093CBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78D57PJNWL;
+				INFOPLIST_FILE = "Make Your Mark/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-Mark";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F784CB711DC854C50093CBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78D57PJNWL;
+				INFOPLIST_FILE = "Make Your Mark/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-Mark";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F784CB731DC854C50093CBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78D57PJNWL;
+				INFOPLIST_FILE = "Make Your MarkTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-MarkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Make Your Mark.app/Make Your Mark";
+			};
+			name = Debug;
+		};
+		F784CB741DC854C50093CBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78D57PJNWL;
+				INFOPLIST_FILE = "Make Your MarkTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-MarkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Make Your Mark.app/Make Your Mark";
+			};
+			name = Release;
+		};
+		F784CB761DC854C50093CBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 78D57PJNWL;
+				INFOPLIST_FILE = "Make Your MarkUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-MarkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Make Your Mark";
+			};
+			name = Debug;
+		};
+		F784CB771DC854C50093CBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 78D57PJNWL;
+				INFOPLIST_FILE = "Make Your MarkUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-MarkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Make Your Mark";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F784CB421DC854C50093CBBC /* Build configuration list for PBXProject "Make Your Mark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F784CB6D1DC854C50093CBBC /* Debug */,
+				F784CB6E1DC854C50093CBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F784CB6F1DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your Mark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F784CB701DC854C50093CBBC /* Debug */,
+				F784CB711DC854C50093CBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F784CB721DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your MarkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F784CB731DC854C50093CBBC /* Debug */,
+				F784CB741DC854C50093CBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F784CB751DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your MarkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F784CB761DC854C50093CBBC /* Debug */,
+				F784CB771DC854C50093CBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F784CB3F1DC854C50093CBBC /* Project object */;
+}
