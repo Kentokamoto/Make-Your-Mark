@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7729EF81DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7729EF61DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld */; };
+		F772FFBA1DD27F4800F29CCC /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = F772FFB91DD27F4800F29CCC /* Events.plist */; };
+		F772FFC01DD2888500F29CCC /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFBF1DD2888500F29CCC /* EventModel.swift */; };
+		F772FFC21DD2889600F29CCC /* AthleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFC11DD2889600F29CCC /* AthleteModel.swift */; };
+		F772FFC41DD2902100F29CCC /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFC31DD2902100F29CCC /* FlightModel.swift */; };
 		F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4A1DC854C50093CBBC /* AppDelegate.swift */; };
 		F784CB4D1DC854C50093CBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4C1DC854C50093CBBC /* ViewController.swift */; };
 		F784CB501DC854C50093CBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784CB4E1DC854C50093CBBC /* Main.storyboard */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7729EF71DDA6AB900B7D6B1 /* EventModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventModelData.xcdatamodel; sourceTree = "<group>"; };
+		F772FFB91DD27F4800F29CCC /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Events.plist; sourceTree = "<group>"; };
+		F772FFBF1DD2888500F29CCC /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		F772FFC11DD2889600F29CCC /* AthleteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteModel.swift; sourceTree = "<group>"; };
+		F772FFC31DD2902100F29CCC /* FlightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		F784CB471DC854C50093CBBC /* Make Your Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make Your Mark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784CB4A1DC854C50093CBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F784CB4C1DC854C50093CBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +87,7 @@
 		F784CB3E1DC854C50093CBBC = {
 			isa = PBXGroup;
 			children = (
+				F7729EF61DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld */,
 				F784CB491DC854C50093CBBC /* Make Your Mark */,
 				F784CB5E1DC854C50093CBBC /* Make Your MarkTests */,
 				F784CB691DC854C50093CBBC /* Make Your MarkUITests */,
@@ -103,6 +114,10 @@
 				F784CB511DC854C50093CBBC /* Assets.xcassets */,
 				F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */,
 				F784CB561DC854C50093CBBC /* Info.plist */,
+				F772FFB91DD27F4800F29CCC /* Events.plist */,
+				F772FFBF1DD2888500F29CCC /* EventModel.swift */,
+				F772FFC11DD2889600F29CCC /* AthleteModel.swift */,
+				F772FFC31DD2902100F29CCC /* FlightModel.swift */,
 			);
 			path = "Make Your Mark";
 			sourceTree = "<group>";
@@ -238,6 +253,7 @@
 				F784CB551DC854C50093CBBC /* LaunchScreen.storyboard in Resources */,
 				F784CB521DC854C50093CBBC /* Assets.xcassets in Resources */,
 				F784CB501DC854C50093CBBC /* Main.storyboard in Resources */,
+				F772FFBA1DD27F4800F29CCC /* Events.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F772FFC41DD2902100F29CCC /* FlightModel.swift in Sources */,
 				F784CB4D1DC854C50093CBBC /* ViewController.swift in Sources */,
+				F7729EF81DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld in Sources */,
+				F772FFC21DD2889600F29CCC /* AthleteModel.swift in Sources */,
+				F772FFC01DD2888500F29CCC /* EventModel.swift in Sources */,
 				F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-Mark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -434,6 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.keno.oka.Make-Your-Mark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -514,6 +536,7 @@
 				F784CB711DC854C50093CBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F784CB721DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your MarkTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +545,7 @@
 				F784CB741DC854C50093CBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F784CB751DC854C50093CBBC /* Build configuration list for PBXNativeTarget "Make Your MarkUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,8 +554,22 @@
 				F784CB771DC854C50093CBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F7729EF61DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F7729EF71DDA6AB900B7D6B1 /* EventModelData.xcdatamodel */,
+			);
+			currentVersion = F7729EF71DDA6AB900B7D6B1 /* EventModelData.xcdatamodel */;
+			path = EventModelData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F784CB3F1DC854C50093CBBC /* Project object */;
 }
