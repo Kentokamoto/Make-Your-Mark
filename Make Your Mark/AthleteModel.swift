@@ -10,7 +10,6 @@ import Foundation
 
 
 class AthleteModel {
-    var flightNum = Int()
     var position : Int?
     var firstName = String()
     var lastName = String()
@@ -20,4 +19,8 @@ class AthleteModel {
     var bestMarkInMeters : Float?
     var provisionalQualifying  = false
     var automaticQualifying = false
+    
+    init(pos : Int){
+        position = pos
+    }
 }

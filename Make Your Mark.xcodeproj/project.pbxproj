@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7729EF81DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7729EF61DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld */; };
 		F772FFBA1DD27F4800F29CCC /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = F772FFB91DD27F4800F29CCC /* Events.plist */; };
 		F772FFC01DD2888500F29CCC /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFBF1DD2888500F29CCC /* EventModel.swift */; };
 		F772FFC21DD2889600F29CCC /* AthleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFC11DD2889600F29CCC /* AthleteModel.swift */; };
 		F772FFC41DD2902100F29CCC /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFC31DD2902100F29CCC /* FlightModel.swift */; };
 		F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4A1DC854C50093CBBC /* AppDelegate.swift */; };
-		F784CB4D1DC854C50093CBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4C1DC854C50093CBBC /* ViewController.swift */; };
+		F784CB4D1DC854C50093CBBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4C1DC854C50093CBBC /* MainViewController.swift */; };
 		F784CB501DC854C50093CBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784CB4E1DC854C50093CBBC /* Main.storyboard */; };
 		F784CB521DC854C50093CBBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F784CB511DC854C50093CBBC /* Assets.xcassets */; };
 		F784CB551DC854C50093CBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */; };
 		F784CB601DC854C50093CBBC /* Make_Your_MarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB5F1DC854C50093CBBC /* Make_Your_MarkTests.swift */; };
 		F784CB6B1DC854C50093CBBC /* Make_Your_MarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB6A1DC854C50093CBBC /* Make_Your_MarkUITests.swift */; };
+		F79485881DE22A690049E6FC /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F79485861DE22A690049E6FC /* Models.xcdatamodeld */; };
+		F79485A21DE257060049E6FC /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A11DE257060049E6FC /* MainTableViewCell.swift */; };
+		F79485A61DE2D8A50049E6FC /* NewEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */; };
+		F79485A81DE2F4350049E6FC /* AthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */; };
+		F79485AA1DE2FA710049E6FC /* AthleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F7729EF71DDA6AB900B7D6B1 /* EventModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventModelData.xcdatamodel; sourceTree = "<group>"; };
 		F772FFB91DD27F4800F29CCC /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Events.plist; sourceTree = "<group>"; };
 		F772FFBF1DD2888500F29CCC /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		F772FFC11DD2889600F29CCC /* AthleteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteModel.swift; sourceTree = "<group>"; };
 		F772FFC31DD2902100F29CCC /* FlightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		F784CB471DC854C50093CBBC /* Make Your Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make Your Mark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784CB4A1DC854C50093CBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F784CB4C1DC854C50093CBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F784CB4C1DC854C50093CBBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F784CB4F1DC854C50093CBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F784CB511DC854C50093CBBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F784CB541DC854C50093CBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +60,11 @@
 		F784CB661DC854C50093CBBC /* Make Your MarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make Your MarkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784CB6A1DC854C50093CBBC /* Make_Your_MarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_Your_MarkUITests.swift; sourceTree = "<group>"; };
 		F784CB6C1DC854C50093CBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79485871DE22A690049E6FC /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
+		F79485A11DE257060049E6FC /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableViewController.swift; sourceTree = "<group>"; };
+		F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteTableViewController.swift; sourceTree = "<group>"; };
+		F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +95,6 @@
 		F784CB3E1DC854C50093CBBC = {
 			isa = PBXGroup;
 			children = (
-				F7729EF61DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld */,
 				F784CB491DC854C50093CBBC /* Make Your Mark */,
 				F784CB5E1DC854C50093CBBC /* Make Your MarkTests */,
 				F784CB691DC854C50093CBBC /* Make Your MarkUITests */,
@@ -108,8 +115,12 @@
 		F784CB491DC854C50093CBBC /* Make Your Mark */ = {
 			isa = PBXGroup;
 			children = (
+				F79485861DE22A690049E6FC /* Models.xcdatamodeld */,
 				F784CB4A1DC854C50093CBBC /* AppDelegate.swift */,
-				F784CB4C1DC854C50093CBBC /* ViewController.swift */,
+				F784CB4C1DC854C50093CBBC /* MainViewController.swift */,
+				F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */,
+				F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */,
+				F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */,
 				F784CB4E1DC854C50093CBBC /* Main.storyboard */,
 				F784CB511DC854C50093CBBC /* Assets.xcassets */,
 				F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */,
@@ -118,6 +129,7 @@
 				F772FFBF1DD2888500F29CCC /* EventModel.swift */,
 				F772FFC11DD2889600F29CCC /* AthleteModel.swift */,
 				F772FFC31DD2902100F29CCC /* FlightModel.swift */,
+				F79485A11DE257060049E6FC /* MainTableViewCell.swift */,
 			);
 			path = "Make Your Mark";
 			sourceTree = "<group>";
@@ -279,11 +291,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F772FFC41DD2902100F29CCC /* FlightModel.swift in Sources */,
-				F784CB4D1DC854C50093CBBC /* ViewController.swift in Sources */,
-				F7729EF81DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld in Sources */,
+				F784CB4D1DC854C50093CBBC /* MainViewController.swift in Sources */,
 				F772FFC21DD2889600F29CCC /* AthleteModel.swift in Sources */,
+				F79485A21DE257060049E6FC /* MainTableViewCell.swift in Sources */,
+				F79485881DE22A690049E6FC /* Models.xcdatamodeld in Sources */,
+				F79485A81DE2F4350049E6FC /* AthleteTableViewController.swift in Sources */,
+				F79485A61DE2D8A50049E6FC /* NewEventTableViewController.swift in Sources */,
 				F772FFC01DD2888500F29CCC /* EventModel.swift in Sources */,
 				F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */,
+				F79485AA1DE2FA710049E6FC /* AthleteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,13 +575,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F7729EF61DDA6AB900B7D6B1 /* EventModelData.xcdatamodeld */ = {
+		F79485861DE22A690049E6FC /* Models.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F7729EF71DDA6AB900B7D6B1 /* EventModelData.xcdatamodel */,
+				F79485871DE22A690049E6FC /* Models.xcdatamodel */,
 			);
-			currentVersion = F7729EF71DDA6AB900B7D6B1 /* EventModelData.xcdatamodel */;
-			path = EventModelData.xcdatamodeld;
+			currentVersion = F79485871DE22A690049E6FC /* Models.xcdatamodel */;
+			path = Models.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

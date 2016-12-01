@@ -12,4 +12,9 @@ import Foundation
 class FlightModel{
     var flightNumber = Int()
     var athletesInFlight = [AthleteModel]()
+    
+    init(flightNum: Int, athletes: [AthleteModel]){
+        flightNumber = flightNum
+        athletesInFlight = athletes
+    }
 }
