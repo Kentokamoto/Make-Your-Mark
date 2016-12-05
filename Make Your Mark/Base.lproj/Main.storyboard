@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cC1-ow-RJR" id="iOx-lB-amb">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="111"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Xs-hD-8wE">
@@ -46,7 +46,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PXD-16-h7E">
-                                                            <rect key="frame" x="0.0" y="1" width="130" height="113"/>
+                                                            <rect key="frame" x="0.0" y="0.5" width="130" height="113"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="113"/>
@@ -498,7 +498,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                             <tableViewSection headerTitle="Athlete Information" id="Yf7-gm-N4s">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Jl4-hi-7BX" detailTextLabel="RrE-Ra-l9c" style="IBUITableViewCellStyleValue1" id="H9Z-wM-UNX">
-                                        <rect key="frame" x="0.0" y="597" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="596" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H9Z-wM-UNX" id="i37-es-VZS">
                                             <rect key="frame" x="0.0" y="0.0" width="702" height="44"/>
@@ -586,12 +586,18 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="athleteFirstNameChanged:" destination="TzU-hq-HGS" eventType="editingDidEnd" id="kC6-fs-xSQ"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRU-v5-Tbe">
                                             <rect key="frame" x="158" y="46" width="602" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="athleteLastNameChanged:" destination="TzU-hq-HGS" eventType="editingDidEnd" id="qLB-NP-uX6"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Seed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiJ-dq-c7j">
                                             <rect key="frame" x="158" y="84" width="602" height="30"/>
@@ -856,7 +862,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                                 <rect key="frame" x="0.0" y="28" width="768" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NvN-6r-Pso" id="94k-tq-HDe">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="73"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competition Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCj-ik-P5S">

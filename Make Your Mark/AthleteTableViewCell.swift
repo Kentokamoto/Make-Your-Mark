@@ -8,12 +8,14 @@
 
 import UIKit
 
-class AthleteTableViewCell: UITableViewCell {
+class AthleteTableViewCell: UITableViewCell,UITextFieldDelegate {
 
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var seedTextField: UITextField!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

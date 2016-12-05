@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import CoreData
+
+protocol AthleteTableViewControllerDelegate {
+    func saveData(athletes: Array<Array<Athlete> >)
+}
 
 class AthleteTableViewController: UITableViewController, UINavigationControllerDelegate{
-    var flights = [FlightModel]()
+    var flights = Array<Array<Athlete> >()
+    var delegate : AthleteTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,8 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         navigationController?.delegate = self
+        print("Array Size", flights.count)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +44,7 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return flights[section].athletesInFlight.count
+        return flights[section].count
     }
 
     override func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
@@ -45,11 +53,11 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "athleteIdentifier", for: indexPath) as! AthleteTableViewCell
-        let athlete = flights[indexPath.section].athletesInFlight[indexPath.row]
-        cell.positionLabel.text = String(describing: athlete.position!)
+        let athlete = flights[indexPath.section][indexPath.row]
+        cell.positionLabel.text = String(indexPath.row+1 )
         cell.firstNameTextField.text = athlete.firstName
         cell.lastNameTextField.text = athlete.lastName
-        cell.seedTextField.text = String(athlete.seedInMeters)
+        
         return cell
     }
  
@@ -57,47 +65,58 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
         return "Flight " + String(section + 1)
     }
     
+    @IBAction func athleteFirstNameChanged(_ sender: UITextField) {
+        print("First Name changed")
+        
+        let pt =  sender.convert(CGPoint.zero, to: self.tableView)
+        let index = self.tableView.indexPathForRow(at: pt)
+
+        flights[(index?.section)!][(index?.row)!].firstName = sender.text
+        
+    }
+    
+    @IBAction func athleteLastNameChanged(_ sender: UITextField) {
+        print("Last Name Changed")
+        let pt = sender.convert(CGPoint.zero, to: self.tableView)
+        let index = self.tableView.indexPathForRow(at: pt)
+        flights[(index?.section)!][(index?.row)!].lastName = sender.text
+    }
+    
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if let controller = viewController as? NewEventTableViewController {
             print("Send me back")
-            writeToModel()
+            
+            self.delegate?.saveData(athletes: self.flights)
             controller.flights = self.flights
-        }
-    }
-    func writeToModel(){
-        for i in 0...self.flights.count{
-            
-            for j in 0...self.flights[i].athletesInFlight.count {
-                let path = IndexPath(row:j, section: i)
-                let cell = tableView.dequeueReusableCell(withIdentifier: "athleteIdentifier", for: path ) as! AthleteTableViewCell
-                
-                self.flights[i].athletesInFlight[j].firstName = cell.firstNameTextField.text!
-                self.flights[i].athletesInFlight[j].lastName = cell.lastNameTextField.text!
-                self.flights[i].athletesInFlight[j].seedInMeters = Float(cell.seedTextField.text!)!
-            }
-            
+            //writeToModel()
+            //control
         }
     }
 
-    /*
+    
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+ 
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+            flights[indexPath.section].remove(at: indexPath.row)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Editing")
+    }
 
     /*
     // Override to support rearranging the table view.

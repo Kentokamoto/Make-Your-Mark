@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class NewEventTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     /*
      * Outlet Variables
@@ -28,8 +28,7 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
      */
     let eventList = ["Discus","Hammer","High Jump" , "Javelin", "Long Jump", "Pole Vault", "Shot Put", "Triple Jump", "Weight Throw" ]
     
-    var flights = [FlightModel]()
-    
+    var flights = Array<Array<Athlete> >()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,25 +115,6 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneButtonSegue"{
-                print("Lets Save")
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            
-            let event = Event(context: context)
-            event.competitionName = competitionNameTextField.text
-            event.competitionNumber = competitionNumberTextField.text
-            event.season = seasonSegmentControl.titleForSegment(at: seasonSegmentControl.selectedSegmentIndex)
-            //event.eventDateTime = Date(dateTimeTextField.text)
-            event.gender = genderSegmentControl.titleForSegment(at: genderSegmentControl.selectedSegmentIndex)
-            event.eventType = eventTypeTextField.text
-            event.measurement = measureSegmentControl.titleForSegment(at: measureSegmentControl.selectedSegmentIndex)
-            //event.numberOfFlights = flightNumberTextField.text
-            //event.athletesInFinal = finalAthleteNumberTextField.text
-            //event.automaticMark = autoMarkTextField.text
-            //event.provisionalMark = provoMarkTextField.text
-            
-            
-            // Save the data to core data
-            (UIApplication.shared.delegate as! AppDelegate ).saveContext()
             
         }else if segue.identifier == "addAthleteSegue" {
             print("Prepare for Athlete adding")
@@ -143,23 +123,25 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
                 createFlights(numFlights: Int(flightNumberTextField.text!)!)
             }
             let vc = segue.destination as! AthleteTableViewController
-            if let title = flightNumberTextField.text, !title.isEmpty  {
-                vc.flights = self.flights
-            }
+           
+            vc.flights = self.flights
+            
         }
     }
     
     func createFlights(numFlights : Int){
-        var tempflights = [FlightModel]()
-        for i in  1 ... numFlights{
-            var tempAthlete = [AthleteModel]()
+        for _ in  1 ... numFlights{
+            var tempAthletes = Array<Athlete>()
             for j in 1...9{
-                tempAthlete.append(AthleteModel(pos: j))
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let athleteEntity = NSEntityDescription.entity(forEntityName: "Athlete", in: context)
+                let athlete = Athlete(entity: athleteEntity!, insertInto: context )
+                athlete.setValue(j, forKey: "position")
+                tempAthletes.append(athlete)
             }
-            let tempFlight = FlightModel(flightNum: i,athletes: tempAthlete)
-            tempflights.append(tempFlight)
+            
+            self.flights.append(tempAthletes)
         }
-        self.flights = tempflights
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -213,6 +195,7 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
         }
         return true
     }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -267,5 +250,10 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension NewEventTableViewController : AthleteTableViewControllerDelegate{
+    func saveData(athletes: Array<Array<Athlete> >) {
+        self.flights = athletes
+    }
 }

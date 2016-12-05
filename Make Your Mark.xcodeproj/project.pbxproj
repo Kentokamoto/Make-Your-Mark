@@ -115,11 +115,10 @@
 		F784CB491DC854C50093CBBC /* Make Your Mark */ = {
 			isa = PBXGroup;
 			children = (
+				F7A926D01DF3D8E900A818B6 /* Controllers */,
 				F79485861DE22A690049E6FC /* Models.xcdatamodeld */,
 				F784CB4A1DC854C50093CBBC /* AppDelegate.swift */,
-				F784CB4C1DC854C50093CBBC /* MainViewController.swift */,
-				F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */,
-				F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */,
+				F79485A11DE257060049E6FC /* MainTableViewCell.swift */,
 				F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */,
 				F784CB4E1DC854C50093CBBC /* Main.storyboard */,
 				F784CB511DC854C50093CBBC /* Assets.xcassets */,
@@ -129,7 +128,6 @@
 				F772FFBF1DD2888500F29CCC /* EventModel.swift */,
 				F772FFC11DD2889600F29CCC /* AthleteModel.swift */,
 				F772FFC31DD2902100F29CCC /* FlightModel.swift */,
-				F79485A11DE257060049E6FC /* MainTableViewCell.swift */,
 			);
 			path = "Make Your Mark";
 			sourceTree = "<group>";
@@ -150,6 +148,16 @@
 				F784CB6C1DC854C50093CBBC /* Info.plist */,
 			);
 			path = "Make Your MarkUITests";
+			sourceTree = "<group>";
+		};
+		F7A926D01DF3D8E900A818B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F784CB4C1DC854C50093CBBC /* MainViewController.swift */,
+				F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */,
+				F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
