@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F772FFBA1DD27F4800F29CCC /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = F772FFB91DD27F4800F29CCC /* Events.plist */; };
-		F772FFC01DD2888500F29CCC /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFBF1DD2888500F29CCC /* EventModel.swift */; };
-		F772FFC21DD2889600F29CCC /* AthleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFC11DD2889600F29CCC /* AthleteModel.swift */; };
-		F772FFC41DD2902100F29CCC /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772FFC31DD2902100F29CCC /* FlightModel.swift */; };
 		F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4A1DC854C50093CBBC /* AppDelegate.swift */; };
 		F784CB4D1DC854C50093CBBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784CB4C1DC854C50093CBBC /* MainViewController.swift */; };
 		F784CB501DC854C50093CBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784CB4E1DC854C50093CBBC /* Main.storyboard */; };
@@ -44,9 +41,6 @@
 
 /* Begin PBXFileReference section */
 		F772FFB91DD27F4800F29CCC /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Events.plist; sourceTree = "<group>"; };
-		F772FFBF1DD2888500F29CCC /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
-		F772FFC11DD2889600F29CCC /* AthleteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteModel.swift; sourceTree = "<group>"; };
-		F772FFC31DD2902100F29CCC /* FlightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		F784CB471DC854C50093CBBC /* Make Your Mark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make Your Mark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784CB4A1DC854C50093CBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F784CB4C1DC854C50093CBBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -125,9 +119,6 @@
 				F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */,
 				F784CB561DC854C50093CBBC /* Info.plist */,
 				F772FFB91DD27F4800F29CCC /* Events.plist */,
-				F772FFBF1DD2888500F29CCC /* EventModel.swift */,
-				F772FFC11DD2889600F29CCC /* AthleteModel.swift */,
-				F772FFC31DD2902100F29CCC /* FlightModel.swift */,
 			);
 			path = "Make Your Mark";
 			sourceTree = "<group>";
@@ -223,7 +214,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Kento Okamoto";
 				TargetAttributes = {
 					F784CB461DC854C50093CBBC = {
@@ -298,14 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F772FFC41DD2902100F29CCC /* FlightModel.swift in Sources */,
 				F784CB4D1DC854C50093CBBC /* MainViewController.swift in Sources */,
-				F772FFC21DD2889600F29CCC /* AthleteModel.swift in Sources */,
 				F79485A21DE257060049E6FC /* MainTableViewCell.swift in Sources */,
 				F79485881DE22A690049E6FC /* Models.xcdatamodeld in Sources */,
 				F79485A81DE2F4350049E6FC /* AthleteTableViewController.swift in Sources */,
 				F79485A61DE2D8A50049E6FC /* NewEventTableViewController.swift in Sources */,
-				F772FFC01DD2888500F29CCC /* EventModel.swift in Sources */,
 				F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */,
 				F79485AA1DE2FA710049E6FC /* AthleteTableViewCell.swift in Sources */,
 			);
@@ -380,6 +368,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -430,6 +419,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

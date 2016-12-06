@@ -54,7 +54,7 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "athleteIdentifier", for: indexPath) as! AthleteTableViewCell
         let athlete = flights[indexPath.section][indexPath.row]
-        cell.positionLabel.text = String(indexPath.row+1 )
+        cell.positionLabel.text = String(athlete.position)
         cell.firstNameTextField.text = athlete.firstName
         cell.lastNameTextField.text = athlete.lastName
         
@@ -66,7 +66,6 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
     }
     
     @IBAction func athleteFirstNameChanged(_ sender: UITextField) {
-        print("First Name changed")
         
         let pt =  sender.convert(CGPoint.zero, to: self.tableView)
         let index = self.tableView.indexPathForRow(at: pt)
@@ -76,20 +75,15 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
     }
     
     @IBAction func athleteLastNameChanged(_ sender: UITextField) {
-        print("Last Name Changed")
         let pt = sender.convert(CGPoint.zero, to: self.tableView)
         let index = self.tableView.indexPathForRow(at: pt)
         flights[(index?.section)!][(index?.row)!].lastName = sender.text
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        if let controller = viewController as? NewEventTableViewController {
+        if let _ = viewController as? NewEventTableViewController {
             print("Send me back")
-            
             self.delegate?.saveData(athletes: self.flights)
-            controller.flights = self.flights
-            //writeToModel()
-            //control
         }
     }
 
@@ -107,8 +101,11 @@ class AthleteTableViewController: UITableViewController, UINavigationControllerD
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            print("Removing at Row ", indexPath.row )
             flights[indexPath.section].remove(at: indexPath.row)
+            print("IndexPath: ", indexPath)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
