@@ -20,6 +20,7 @@
 		F79485A61DE2D8A50049E6FC /* NewEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */; };
 		F79485A81DE2F4350049E6FC /* AthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */; };
 		F79485AA1DE2FA710049E6FC /* AthleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */; };
+		F7992C421DF785FD006DA1B9 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7992C411DF785FD006DA1B9 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableViewController.swift; sourceTree = "<group>"; };
 		F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteTableViewController.swift; sourceTree = "<group>"; };
 		F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteTableViewCell.swift; sourceTree = "<group>"; };
+		F7992C411DF785FD006DA1B9 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				F784CB4C1DC854C50093CBBC /* MainViewController.swift */,
 				F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */,
 				F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */,
+				F7992C411DF785FD006DA1B9 /* EventDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				F79485A81DE2F4350049E6FC /* AthleteTableViewController.swift in Sources */,
 				F79485A61DE2D8A50049E6FC /* NewEventTableViewController.swift in Sources */,
 				F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */,
+				F7992C421DF785FD006DA1B9 /* EventDetailViewController.swift in Sources */,
 				F79485AA1DE2FA710049E6FC /* AthleteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

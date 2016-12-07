@@ -29,6 +29,24 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
     let eventList = ["Discus","Hammer","High Jump" , "Javelin", "Long Jump", "Pole Vault", "Shot Put", "Triple Jump", "Weight Throw" ]
     
     var flights = Array<Array<Athlete> >()
+    var currentTextField : UITextField?
+    lazy var inputToolbar: UIToolbar = {
+        var toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = true
+        toolbar.sizeToFit()
+        
+        var doneButton = UIBarButtonItem(title: "Done", style: .done , target: self, action: #selector(NewEventTableViewController.inputToolbarDonePressed))
+        var flexibleSpaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        var fixedSpaceButton = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        
+        toolbar.setItems([flexibleSpaceButton,doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        
+        return toolbar
+    }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +61,7 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
         let pickerView = UIPickerView()
         pickerView.delegate = self
         eventTypeTextField.inputView = pickerView
+        eventTypeTextField.inputAccessoryView = inputToolbar
         
         let item : UITextInputAssistantItem = eventTypeTextField.inputAssistantItem
         item.leadingBarButtonGroups = []
@@ -82,14 +101,18 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         eventTypeTextField.text = eventList[row]
     }
+    @IBAction func pickerViewEditBegins(_ sender: UITextField) {
+        currentTextField = sender
+    }
     
     /*
      * Date Picker View Components
      */
     @IBAction func dateTextFieldEditing(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
-        
+        currentTextField = sender
         datePickerView.datePickerMode = UIDatePickerMode.dateAndTime
+        sender.inputAccessoryView = inputToolbar
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(NewEventTableViewController.datePickerValueChanged ), for: UIControlEvents.valueChanged)
     }
@@ -97,8 +120,6 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd, yyyy hh:mm aa"
         dateTimeTextField.text = dateFormatter.string(from: sender.date)
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -106,7 +127,9 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
             tableView.deselectRow(at: indexPath, animated: false)
         }
     }
-    
+    func inputToolbarDonePressed(){        
+        currentTextField?.resignFirstResponder()
+    }
     
     
     /*
@@ -158,7 +181,7 @@ class NewEventTableViewController: UITableViewController, UIPickerViewDataSource
                     let athleteEntity = NSEntityDescription.entity(forEntityName: "Athlete", in: context)
                     let athlete = Athlete(entity: athleteEntity!, insertInto: context )
                     athlete.setValue(j, forKey: "position")
-                    athlete.setValue([Float](repeating: 0.0, count: 6),forKey: "attempts")
+                    athlete.setValue([Float](repeating: 0.0, count: 3),forKey: "attempts")
                     tempAthletes.append(athlete)
                 }
                 self.flights.append(tempAthletes)

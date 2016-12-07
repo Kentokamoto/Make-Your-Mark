@@ -33,11 +33,11 @@ class MainViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCellIdenitifier", for: indexPath) as! MainTableViewCell
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM-dd-yyyy 'at' HH:mm"
+        formatter.dateFormat = "MM-dd-yyyy"
         
         let event = events[indexPath.row]
         cell.competitionNameLabel?.text = event.value(forKey: "competitionName") as? String
-        //cell.dateLabel?.text = event.value(forKey: "eventDateTime") as? String
+        cell.dateLabel?.text = formatter.string(from: event.eventDateTime as! Date)
         cell.eventTypeLabel?.text = event.value(forKey: "eventType") as? String
         cell.genderLabel?.text = event.value(forKey: "gender" ) as? String
         
@@ -88,18 +88,21 @@ class MainViewController: UITableViewController{
     /*
      * Actions
      */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailedListSegue"{
+            let vc = segue.destination as! EventDetailViewController
+            let indexPath = tableView.indexPath(for: sender as! MainTableViewCell)!
+            vc.event = events[indexPath.row]
+        }
+    }
+    
     @IBAction func cancelButtonPressed(segue: UIStoryboardSegue){
         print("cancel")
     }
     @IBAction func doneButtonPressed(segue: UIStoryboardSegue){
         let vc = segue.source as! NewEventTableViewController
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let eventEntity = NSEntityDescription.entity(forEntityName: "Event", in: context)
-        let _ = NSManagedObject(entity: eventEntity!, insertInto: context)
         let event = Event(context: context)
-        
-        
-        
         
         print("Adding Compentition Name")
         //event.setValue(vc.competitionNameTextField.text, forKey: "competitionName")
@@ -138,16 +141,14 @@ class MainViewController: UITableViewController{
         event.provisionalMark = Float(vc.provoMarkTextField.text!)!
         print("Adding Flight Info")
         
-        for flight in vc.flights {
+        for i in 1...vc.flights.count {
             let newFlight = Flight(context: context)
-            for athlete in flight {
+            newFlight.flightNumber = Int16(i)
+            for athlete in vc.flights[i-1] {
                 newFlight.addToAthletes(athlete)
             }
             event.addToFlights(newFlight)
         }
-        
-        //event.setValue(thing, forKey: "flights")
-        
         
         // Save the date to core data
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
