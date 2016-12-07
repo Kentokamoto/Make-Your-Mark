@@ -66,7 +66,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qt0-ZO-RiM" kind="show" id="2Z2-h5-WPh"/>
+                                            <segue destination="qt0-ZO-RiM" kind="show" identifier="flightLogSegue" id="2Z2-h5-WPh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -630,7 +630,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                             </tableViewSection>
                             <tableViewSection headerTitle="Athlete Information" id="Yf7-gm-N4s">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Jl4-hi-7BX" detailTextLabel="RrE-Ra-l9c" style="IBUITableViewCellStyleValue1" id="H9Z-wM-UNX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="athleteInfoIdentifier" textLabel="Jl4-hi-7BX" detailTextLabel="RrE-Ra-l9c" style="IBUITableViewCellStyleValue1" id="H9Z-wM-UNX">
                                         <rect key="frame" x="0.0" y="597" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H9Z-wM-UNX" id="i37-es-VZS">
@@ -698,34 +698,51 @@ EEV2ZW50IEluZm9ybWF0aW9uA
             </objects>
             <point key="canvasLocation" x="1727" y="5"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Flight Collection View Controller-->
         <scene sceneID="8Ep-dI-abw">
             <objects>
-                <collectionViewController id="qt0-ZO-RiM" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="WGI-oL-7mo">
+                <collectionViewController id="qt0-ZO-RiM" customClass="FlightCollectionViewController" customModule="Make_Your_Mark" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="WGI-oL-7mo">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mxN-Hd-lXw">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="50" height="50"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
+                        <collectionViewLayout key="collectionViewLayout" id="FHz-Sd-dAn" customClass="CustomCollectionViewLayout" customModule="Make_Your_Mark" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KdP-gl-x8g">
-                                <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="flightLogIdentifier" id="KdP-gl-x8g" customClass="FlightCollectionViewCell" customModule="Make_Your_Mark" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJX-MM-3ZQ">
+                                            <rect key="frame" x="129" y="39.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-dP-I02">
+                                            <rect key="frame" x="8" y="35" width="284" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cJX-MM-3ZQ" firstAttribute="centerX" secondItem="KdP-gl-x8g" secondAttribute="centerX" id="Ov8-JC-LEF"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="g9m-dP-I02" secondAttribute="leading" id="Swx-fa-o6R"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="g9m-dP-I02" secondAttribute="trailing" id="c0e-eZ-YLy"/>
+                                    <constraint firstItem="g9m-dP-I02" firstAttribute="centerY" secondItem="KdP-gl-x8g" secondAttribute="centerY" id="oFM-LJ-Vum"/>
+                                    <constraint firstItem="cJX-MM-3ZQ" firstAttribute="centerY" secondItem="KdP-gl-x8g" secondAttribute="centerY" id="z22-Vq-TS3"/>
+                                </constraints>
+                                <size key="customSize" width="300" height="100"/>
+                                <connections>
+                                    <outlet property="label" destination="cJX-MM-3ZQ" id="oVP-Ov-Qfq"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0Dv-LM-HJv">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="qt0-ZO-RiM" id="fCa-SM-aed"/>
                             <outlet property="delegate" destination="qt0-ZO-RiM" id="Xja-v7-DbU"/>
@@ -734,7 +751,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gM-E7-yXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="698"/>
+            <point key="canvasLocation" x="1808.59375" y="697.8515625"/>
         </scene>
         <!--Athlete Table View Controller-->
         <scene sceneID="Hbx-Yo-DcH">
@@ -855,7 +872,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-qA-NTi">
-                                            <rect key="frame" x="342" y="26" width="85" height="21"/>
+                                            <rect key="frame" x="341.5" y="26" width="85" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>

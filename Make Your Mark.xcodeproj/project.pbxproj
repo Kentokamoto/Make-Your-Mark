@@ -21,6 +21,9 @@
 		F79485A81DE2F4350049E6FC /* AthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */; };
 		F79485AA1DE2FA710049E6FC /* AthleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */; };
 		F7992C421DF785FD006DA1B9 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7992C411DF785FD006DA1B9 /* EventDetailViewController.swift */; };
+		F7992C451DF7BF99006DA1B9 /* FlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7992C441DF7BF99006DA1B9 /* FlightCollectionViewCell.swift */; };
+		F7992C471DF7C103006DA1B9 /* FlightCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7992C461DF7C103006DA1B9 /* FlightCollectionViewController.swift */; };
+		F7992C491DF7CA33006DA1B9 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7992C481DF7CA33006DA1B9 /* CustomCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteTableViewController.swift; sourceTree = "<group>"; };
 		F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteTableViewCell.swift; sourceTree = "<group>"; };
 		F7992C411DF785FD006DA1B9 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		F7992C441DF7BF99006DA1B9 /* FlightCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7992C461DF7C103006DA1B9 /* FlightCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightCollectionViewController.swift; sourceTree = "<group>"; };
+		F7992C481DF7CA33006DA1B9 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,16 +117,16 @@
 		F784CB491DC854C50093CBBC /* Make Your Mark */ = {
 			isa = PBXGroup;
 			children = (
+				F7992C431DF7BF6E006DA1B9 /* CellSubclasses */,
 				F7A926D01DF3D8E900A818B6 /* Controllers */,
 				F79485861DE22A690049E6FC /* Models.xcdatamodeld */,
 				F784CB4A1DC854C50093CBBC /* AppDelegate.swift */,
-				F79485A11DE257060049E6FC /* MainTableViewCell.swift */,
-				F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */,
 				F784CB4E1DC854C50093CBBC /* Main.storyboard */,
 				F784CB511DC854C50093CBBC /* Assets.xcassets */,
 				F784CB531DC854C50093CBBC /* LaunchScreen.storyboard */,
 				F784CB561DC854C50093CBBC /* Info.plist */,
 				F772FFB91DD27F4800F29CCC /* Events.plist */,
+				F7992C481DF7CA33006DA1B9 /* CustomCollectionViewLayout.swift */,
 			);
 			path = "Make Your Mark";
 			sourceTree = "<group>";
@@ -143,6 +149,16 @@
 			path = "Make Your MarkUITests";
 			sourceTree = "<group>";
 		};
+		F7992C431DF7BF6E006DA1B9 /* CellSubclasses */ = {
+			isa = PBXGroup;
+			children = (
+				F79485A11DE257060049E6FC /* MainTableViewCell.swift */,
+				F79485A91DE2FA710049E6FC /* AthleteTableViewCell.swift */,
+				F7992C441DF7BF99006DA1B9 /* FlightCollectionViewCell.swift */,
+			);
+			name = CellSubclasses;
+			sourceTree = "<group>";
+		};
 		F7A926D01DF3D8E900A818B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +166,7 @@
 				F79485A51DE2D8A50049E6FC /* NewEventTableViewController.swift */,
 				F79485A71DE2F4350049E6FC /* AthleteTableViewController.swift */,
 				F7992C411DF785FD006DA1B9 /* EventDetailViewController.swift */,
+				F7992C461DF7C103006DA1B9 /* FlightCollectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -295,10 +312,13 @@
 				F784CB4D1DC854C50093CBBC /* MainViewController.swift in Sources */,
 				F79485A21DE257060049E6FC /* MainTableViewCell.swift in Sources */,
 				F79485881DE22A690049E6FC /* Models.xcdatamodeld in Sources */,
+				F7992C451DF7BF99006DA1B9 /* FlightCollectionViewCell.swift in Sources */,
 				F79485A81DE2F4350049E6FC /* AthleteTableViewController.swift in Sources */,
 				F79485A61DE2D8A50049E6FC /* NewEventTableViewController.swift in Sources */,
+				F7992C471DF7C103006DA1B9 /* FlightCollectionViewController.swift in Sources */,
 				F784CB4B1DC854C50093CBBC /* AppDelegate.swift in Sources */,
 				F7992C421DF785FD006DA1B9 /* EventDetailViewController.swift in Sources */,
+				F7992C491DF7CA33006DA1B9 /* CustomCollectionViewLayout.swift in Sources */,
 				F79485AA1DE2FA710049E6FC /* AthleteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
