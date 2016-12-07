@@ -25,7 +25,6 @@ class CustomCollectionViewLayout: UICollectionViewLayout {
         return self.contentSize
     }
     override func prepare() {
-        print(collectionView!.contentOffset.y)
         if dataSourceDidUpdate == false{
             // Determine current content offsets.
             let xOffset = collectionView!.contentOffset.x

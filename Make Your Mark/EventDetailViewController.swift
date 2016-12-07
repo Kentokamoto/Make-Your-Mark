@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
-class EventDetailViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+protocol EventDetailViewControllerDelegate {
+    func saveData(event: Event )
+}
+class EventDetailViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
     var event : Event!
+    var delegate : EventDetailViewControllerDelegate?
+
     // Outlet Variables
     @IBOutlet weak var competitionNameLabel: UILabel!
     @IBOutlet weak var competitionNumberLabel: UILabel!
@@ -30,6 +36,7 @@ class EventDetailViewController: UIViewController,UITableViewDataSource, UITable
 
         // Do any additional setup after loading the view.
         updateLabels()
+        navigationController?.delegate = self
     }
 
     func updateLabels(){
@@ -83,7 +90,26 @@ class EventDetailViewController: UIViewController,UITableViewDataSource, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "flightLogSegue" {
             print("Lets Go!")
+            let vc = segue.destination as! FlightCollectionViewController
+            let indexPaths = flightTableView.indexPath(for: sender as! UITableViewCell)
+            vc.flightLog = event.flights?.object(at: (indexPaths?.row)!) as! Flight?
+
         }
     }
     
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if let _ = viewController as? MainViewController {
+            print("Called")
+            self.delegate?.saveData(event: event)
+        }
+    }
+    
+}
+extension EventDetailViewController : FlightCollectionViewControllerDelegate{
+    func saveData(flight: Flight) {
+        print("Insert to Flights")
+        self.event.insertIntoFlights(flight, at: flight.flightNumber-1)
+                
+        
+    }
 }

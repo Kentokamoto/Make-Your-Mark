@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 class FlightCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var entryTextField: UITextField!
+    
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
         setup()

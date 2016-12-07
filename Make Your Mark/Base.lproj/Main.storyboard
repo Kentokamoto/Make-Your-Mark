@@ -50,14 +50,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WDw-kQ-UlF">
-                                                    <rect key="frame" x="48" y="12" width="34" height="21"/>
+                                                    <rect key="frame" x="48" y="12" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u9l-wl-AMl">
-                                                    <rect key="frame" x="658" y="12" width="44" height="21"/>
+                                                    <rect key="frame" x="658" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -631,21 +631,21 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                             <tableViewSection headerTitle="Athlete Information" id="Yf7-gm-N4s">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="athleteInfoIdentifier" textLabel="Jl4-hi-7BX" detailTextLabel="RrE-Ra-l9c" style="IBUITableViewCellStyleValue1" id="H9Z-wM-UNX">
-                                        <rect key="frame" x="0.0" y="597" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="596" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H9Z-wM-UNX" id="i37-es-VZS">
                                             <rect key="frame" x="0.0" y="0.0" width="702" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Athletes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jl4-hi-7BX">
-                                                    <rect key="frame" x="48" y="12" width="63" height="21"/>
+                                                    <rect key="frame" x="48" y="12" width="63" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Edit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RrE-Ra-l9c">
-                                                    <rect key="frame" x="672" y="12" width="30" height="21"/>
+                                                    <rect key="frame" x="672.5" y="12" width="29.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -726,6 +726,9 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="attemptTextFieldEditEnd:" destination="qt0-ZO-RiM" eventType="editingDidEnd" id="JgG-q6-Jyg"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                 </view>
@@ -739,6 +742,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                                 </constraints>
                                 <size key="customSize" width="300" height="100"/>
                                 <connections>
+                                    <outlet property="entryTextField" destination="g9m-dP-I02" id="fEA-5u-OcE"/>
                                     <outlet property="label" destination="cJX-MM-3ZQ" id="oVP-Ov-Qfq"/>
                                 </connections>
                             </collectionViewCell>
@@ -766,7 +770,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                                 <rect key="frame" x="0.0" y="56" width="768" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xMT-eA-l8O" id="WfN-MP-vxu">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="84"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m0-Fj-aL8">
@@ -856,7 +860,7 @@ EEV2ZW50IEluZm9ybWF0aW9uA
                                 <rect key="frame" x="0.0" y="28" width="768" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NvN-6r-Pso" id="94k-tq-HDe">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="73"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competition Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCj-ik-P5S">

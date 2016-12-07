@@ -10,7 +10,13 @@ import UIKit
 
 private let reuseIdentifier = "flightLogIdentifier"
 
-class FlightCollectionViewController: UICollectionViewController {
+protocol FlightCollectionViewControllerDelegate {
+    func saveData(flight: Flight )
+}
+
+class FlightCollectionViewController: UICollectionViewController,UINavigationControllerDelegate {
+    var flightLog : Flight?
+    var delegate : FlightCollectionViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +29,7 @@ class FlightCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         self.automaticallyAdjustsScrollViewInsets = true
+        navigationController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,25 +51,51 @@ class FlightCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 50
+        return (flightLog?.athletes?.count)!
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 20
+        let athlete = flightLog?.athletes?.object(at: section) as! Athlete
+        let attempts = athlete.attempts as! NSArray
+        return attempts.count + 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FlightCollectionViewCell
-        
+        let athlete = flightLog?.athletes?.object(at: indexPath.section) as! Athlete
+        if indexPath.item == 0{
+            cell.entryTextField.isHidden = true
+            cell.label.text = athlete.lastName!  + ", " + athlete.firstName!
+        }else{
+            cell.label.isHidden = true
+            cell.entryTextField.placeholder = "Attempt " + String(describing: indexPath.item)
+            let attempts = athlete.attempts as! Array<Float>
+            cell.entryTextField.text = String(describing: attempts[(indexPath.item)-1])
+        }
     
+        
         // Configure the cell
-        cell.label.text = "Sec  \(indexPath.section)/Item \(indexPath.item)"
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    @IBAction func attemptTextFieldEditEnd(_ sender: UITextField) {
+        let path = sender.convert(CGPoint.zero, to: self.collectionView)
+        let index = self.collectionView?.indexPathForItem(at: path)
+        let currAthlete = flightLog?.athletes?.object(at: (index?.section)!) as! Athlete
+        var attempts = currAthlete.attempts as! Array<Float>
+        attempts[(index?.item)!-1] = Float(sender.text!)!
+        currAthlete.attempts = attempts as NSArray
+        flightLog?.insertIntoAthletes(currAthlete, at: (index?.section)!)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if let _ = viewController as? EventDetailViewController {
+            print("Beam me up")
+            self.delegate?.saveData(flight: self.flightLog!)
+        }
+    }
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking

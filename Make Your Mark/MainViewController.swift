@@ -14,6 +14,7 @@ class MainViewController: UITableViewController{
      * Variables
      */
     var events = [Event]()
+    var indexPathSent : IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +79,6 @@ class MainViewController: UITableViewController{
         
         do{
             events = try context.fetch(Event.fetchRequest())
-            print(events.count)
         }catch{
             print("Fetch of Data Failed")
         }
@@ -93,6 +93,7 @@ class MainViewController: UITableViewController{
             let vc = segue.destination as! EventDetailViewController
             let indexPath = tableView.indexPath(for: sender as! MainTableViewCell)!
             vc.event = events[indexPath.row]
+            indexPathSent = indexPath
         }
     }
     
@@ -155,6 +156,35 @@ class MainViewController: UITableViewController{
         events.append(event)
         print("Done")
     }
-    
 }
 
+extension MainViewController : EventDetailViewControllerDelegate{
+    func saveData(event: Event) {
+        let appDel: AppDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        let context: NSManagedObjectContext = appDel.persistentContainer.viewContext
+        let predicate = NSPredicate(format: "competitionName == %@", event.competitionName!)
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Event")
+        fetchRequest.predicate = predicate
+        
+        do {
+            var fetchedEntities = try context.fetch(fetchRequest) as! [Event]
+            fetchedEntities.insert(event, at: 0 )
+            print("Got EeM")
+        } catch let error{
+            print("Coudn't find anything\(error)")
+        }
+        
+        
+        self.events[(self.indexPathSent?.row)!] = event
+
+        do{
+            try context.save()
+            print("updated")
+        }catch let error{
+            print("Could not save \(error)")
+        }
+
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
+}
