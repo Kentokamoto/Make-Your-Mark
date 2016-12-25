@@ -18,7 +18,7 @@ This is an iOS app so the basic requirements to run the code is to be using a de
 ############
 There is a brief demo of how the app looks online. Follow the YouTube link for a brief demo.
 
-(Click Here)[https://youtu.be/0o\_-nXSysBc]
+(Click Here)[https://youtu.be/0o_-nXSysBc]
 
 
 ###########################
